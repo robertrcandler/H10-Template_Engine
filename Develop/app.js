@@ -38,7 +38,7 @@ function promptEngineer() {
         }
     ]).then(function(ans) {
         arrteam.push(new Engineer(ans.id,ans.name,ans.email,ans.Github));
-        return arrteam();
+        promptNew();
     })
 }
 
@@ -63,7 +63,7 @@ function promptIntern() {
         }
     ]).then(function(ans) {
         arrteam.push(new Intern(ans.id,ans.name,ans.email,ans.School));
-        return arrteam();
+        promptNew();
     });
 }
 
@@ -88,7 +88,7 @@ function promptManager() {
         }
     ]).then(function(ans) {
         arrteam.push(new Manager(ans.id,ans.name,ans.email,ans.OfficeNumber));
-        return arrteam();
+        promptNew();
     });
 }
 
@@ -113,6 +113,7 @@ function promptNew() {
             promptManager();
         } else if (answer.name === "No Thanks, I'm Done.") {
             //ends successfully, now make html template
+            console.log(arrteam);
         } else {
             console.log("Something Went Wrong");
         }
@@ -122,7 +123,10 @@ function promptNew() {
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-​
+​for (var i=0; i < arrteam.length; i++) {
+    //how do i do this next line?
+    render(arrteam[i]);
+}
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.

@@ -5,9 +5,9 @@ const Employee = require("./Employee");
 
 class Engineer {
     constructor(id,name,email,Github) {
-        Employee.id = id,
-        Employee.name = name,
-        Employee.email = email,
+        this.id = id,
+        this.name = name,
+        this.email = email,
         this.Github = Github
     }
     getId() {return this.id}

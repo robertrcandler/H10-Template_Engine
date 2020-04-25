@@ -5,9 +5,9 @@ const Employee = require("./Employee");
 
 class Intern {
     constructor(id,name,email,School) {
-        Employee.id = id,
-        Employee.name = name,
-        Employee.email = email,
+        this.id = id,
+        this.name = name,
+        this.email = email,
         this.School = School
     }
     getId() {return this.id}
