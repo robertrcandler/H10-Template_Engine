@@ -1,7 +1,7 @@
 // TODO: Write code to define and export the Employee class
 //employee needs name, id, email, everyone is employee so only
 //the shared stuff goes here
-class employee {
+class Employee {
     constructor(id,name,email) {
         this.id = id,
         this.name = name,
@@ -13,6 +13,6 @@ class employee {
     //current job not specified so returns employee if not 
     //specified later
     getJob() {return "Employee"}
-}
+};
 
-module.exports = employee
+module.exports = Employee;
