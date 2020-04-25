@@ -14,7 +14,7 @@ class Engineer {
     getName() {return this.name}
     getEmail() {return this.email}
     getGithub() {return this.Github}
-    getJob() {return "Engineer"}
+    getRole() {return "Engineer"}
 }
 
 module.exports = Engineer;

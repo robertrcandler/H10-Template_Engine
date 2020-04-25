@@ -14,7 +14,7 @@ class Intern {
     getName() {return this.name}
     getEmail() {return this.email}
     getSchool() {return this.School}
-    getJob() {return "Intern"}
+    getRole() {return "Intern"}
 }
 
 module.exports = Intern;

@@ -12,7 +12,7 @@ class Employee {
     getEmail() {return this.email}
     //current job not specified so returns employee if not 
     //specified later
-    getJob() {return "Employee"}
+    getRole() {return "Employee"}
 };
 
 module.exports = Employee;

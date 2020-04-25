@@ -4,17 +4,17 @@
 const Employee = require("./Employee");
 
 class Manager {
-    constructor(id,name,email,office_num) {
+    constructor(id,name,email,OfficeNumber) {
         Employee.id = id,
         Employee.name = name,
         Employee.email = email,
-        this.office_num = office_num
+        this.OfficeNumber = OfficeNumber
     }
     getId() {return this.id}
     getName() {return this.name}
     getEmail() {return this.email}
-    getOfficeNum() {return this.office_num}
-    getJob() {return "Manager"}
+    getOfficeNumber() {return this.OfficeNumber}
+    getRole() {return "Manager"}
 }
 
 module.exports = Manager;
