@@ -14,8 +14,8 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-//create an array called team to put all employees in
-
+//create an array called arrteam to put all employees in
+const arrteam = [];
 //create functions with prompts for all employee types
 function promptEngineer() {
     inquirer.prompt([
@@ -37,8 +37,8 @@ function promptEngineer() {
             message: "What is the employee Github page?"
         }
     ]).then(function(ans) {
-        team.push(new Engineer(ans.id,ans.name,ans.email,ans.Github));
-        return team();
+        arrteam.push(new Engineer(ans.id,ans.name,ans.email,ans.Github));
+        return arrteam();
     })
 }
 
@@ -62,8 +62,8 @@ function promptIntern() {
             message: "What school does the intern go to?"
         }
     ]).then(function(ans) {
-        team.push(new Intern(ans.id,ans.name,ans.email,ans.School));
-        return team();
+        arrteam.push(new Intern(ans.id,ans.name,ans.email,ans.School));
+        return arrteam();
     });
 }
 
@@ -87,8 +87,8 @@ function promptManager() {
             message: "What is the manager's office number?"
         }
     ]).then(function(ans) {
-        team.push(new Manager(ans.id,ans.name,ans.email,ans.OfficeNumber));
-        return team();
+        arrteam.push(new Manager(ans.id,ans.name,ans.email,ans.OfficeNumber));
+        return arrteam();
     });
 }
 
