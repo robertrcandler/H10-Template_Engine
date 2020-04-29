@@ -3,17 +3,14 @@
 //all jobs require employee as base
 const Employee = require("./Employee");
 
-class Manager {
-    constructor(id,name,email,OfficeNumber) {
-        this.id = id,
-        this.name = name,
-        this.email = email,
-        this.OfficeNumber = OfficeNumber
+class Manager extends Employee {
+    constructor(name,id,email,officeNumber) {
+        super(name, id, email)
+      
+        this.officeNumber = officeNumber
     }
-    getId() {return this.id}
-    getName() {return this.name}
-    getEmail() {return this.email}
-    getOfficeNumber() {return this.OfficeNumber}
+   
+    getOfficeNumber() {return this.officeNumber}
     getRole() {return "Manager"}
 }
 

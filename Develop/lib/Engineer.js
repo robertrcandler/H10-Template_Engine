@@ -3,17 +3,14 @@
 //all jobs require employee as base
 const Employee = require("./Employee");
 
-class Engineer {
-    constructor(id,name,email,Github) {
-        this.id = id,
-        this.name = name,
-        this.email = email,
-        this.Github = Github
+class Engineer extends Employee {
+    constructor(name, id,email,github) {
+        super(name, id, email);
+
+        this.github = github
     }
-    getId() {return this.id}
-    getName() {return this.name}
-    getEmail() {return this.email}
-    getGithub() {return this.Github}
+ 
+    getGithub() {return this.github}
     getRole() {return "Engineer"}
 }
 
